@@ -91,7 +91,10 @@ class AdminController extends Controller
         $user->phone = $request->phone;
         $user->address = $request->address;
         $user->gender = $request->gender;
-        $user->password = bcrypt($request->password);
+        if(isset($request->password)){
+            $user->password = bcrypt($request->password);
+        }
+        
         $user->active = $request->available == "on" ? 1 : 0;
         $user->proof = ' ';
         $user->save();

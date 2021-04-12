@@ -17,8 +17,8 @@
 
 <script type="text/javascript" src="{{asset('backend/js/plugins/morris/raphael-min.js')}}"></script>
 <script type="text/javascript" src="{{asset('backend/js/plugins/morris/morris.min.js')}}"></script>
-<script type="text/javascript" src="{{asset('backend/js/plugins/rickshaw/d3.v3.js')}}"></script>
-<script type="text/javascript" src="{{asset('backend/js/plugins/rickshaw/rickshaw.min.js')}}"></script>
+<!-- <script type="text/javascript" src="{{asset('backend/js/plugins/rickshaw/d3.v3.js')}}"></script>
+<script type="text/javascript" src="{{asset('backend/js/plugins/rickshaw/rickshaw.min.js')}}"></script> -->
 <script type='text/javascript' src='{{asset('backend/js/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js')}}'></script>
 <script type='text/javascript'
         src='{{asset('backend/js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js')}}'></script>
@@ -35,7 +35,7 @@
 <script type="text/javascript" src="{{asset('backend/js/plugins.js')}}"></script>
 <script type="text/javascript" src="{{asset('backend/js/actions.js')}}"></script>
 
-<script type="text/javascript" src="{{asset('backend/js/demo_dashboard.js')}}"></script>
+<!-- <script type="text/javascript" src="{{asset('backend/js/demo_dashboard.js')}}"></script> -->
 
 
 <!-- THIS PAGE PLUGINS -->
@@ -47,3 +47,4 @@
 <script type="text/javascript" src="{{asset('backend/js/plugins/bootstrap/bootstrap-file-input.js')}}"></script>
 <script type="text/javascript" src="{{asset('backend/js/plugins/bootstrap/bootstrap-select.js')}}"></script>
 <script type="text/javascript" src="{{asset('backend/js/plugins/tagsinput/jquery.tagsinput.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('backend/js/select2.js')}}"></script>

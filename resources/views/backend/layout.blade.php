@@ -12,6 +12,8 @@
             <!-- EOF CSS INCLUDE -->
 </head>
 <body>
+    <!-- START PRELOADS -->
+@include('backend.resources.bottom')
 <!-- START PAGE CONTAINER -->
 <div class="page-container">
 
@@ -67,10 +69,10 @@
 </div>
 <!-- END MESSAGE BOX-->
 
-<!-- START PRELOADS -->
-@include('backend.resources.bottom')
+
         <!-- END TEMPLATE -->
 <!-- END SCRIPTS -->
+@stack('custom-scripts')
 </body>
 </html>
 

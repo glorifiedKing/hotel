@@ -13,10 +13,7 @@
                             </ul>
                         </div>
                         <div class="panel-body">
-                            <p>Add information about incoming new customers whos infomation is not stored on the
-                                database previously. If added then you can
-                                proceed to the booking section and select his/her information while booking or reserving
-                                rooms for him/her.</p>
+                            <p>update employee.</p>
                         </div>
                         <div class="panel-footer">
                             @if(session('success'))
@@ -144,13 +141,13 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="col-md-3 col-xs-12 control-label">Checkbox</label>
+                                <label class="col-md-3 col-xs-12 control-label">activated</label>
 
                                 <div class="col-md-6 col-xs-12">
                                     <label class="check"><input type="checkbox" class="icheckbox"
                                                                 {{$user->active==1?'checked="checked"':""}} name="available"/>
-                                        Checkbox title</label>
-                                    <span class="help-block">Checkbox sample, easy to use</span>
+                                        Yes</label>
+                                    <span class="help-block">available</span>
                                 </div>
                             </div>
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Customers;
 use Illuminate\Http\Request;
+use App\Enums\Country;
 
 class CustomerController extends Controller
 {
@@ -24,7 +25,8 @@ class CustomerController extends Controller
 // show add new customer page or form
     public function showNew()
     {
-        return view('backend.customers.new');
+        $countries = array_combine(Country::getKeys(),Country::getValues());
+        return view('backend.customers.new',compact('countries'));
 
     }
 
@@ -32,7 +34,11 @@ class CustomerController extends Controller
     public function postCustomer(Request $request)
     {
         // name,email,password,address,gender,proof,phone
+        $this->validate($request,[
+            'name' => 'required'
+        ]);
         $customer = new Customers();
+        $customer->title = $request->title;
         $customer->name = $request->name;
         $customer->email = $request->email;
         $customer->phone = $request->phone;
@@ -40,7 +46,13 @@ class CustomerController extends Controller
         $customer->gender = $request->gender;
         $customer->occupation = $request->occupation;
         $customer->designation = $request->designation;
-        $customer->password = bcrypt($request->password);
+        $customer->nationality = $request->nationality;
+        $customer->id_type = $request->id_type;
+        $customer->id_number = $request->id_number;
+        $customer->id_place_of_issue = $request->id_place_of_issue;
+        $customer->id_expiry_date = $request->id_expiry_date;
+
+        $customer->password = bcrypt(time());
         //$customer->active = $request->available == "on" ? 1 : 0;
         $customer->save();
         return back()->with('success', 'New Customer has been added..!');

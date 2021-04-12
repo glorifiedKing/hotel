@@ -36,9 +36,10 @@ class BookingController extends Controller
     {
         $customers = Customers::select(['id', 'name', 'designation'])->get();
         $rooms = Room::getBookingRooms();
-        return view('backend.bookings.new')
-            ->withCustomers($customers)
-            ->withRooms($rooms);
+        $countries = [];
+        return view('backend.bookings.new',compact('customers','rooms','countries'));
+         //   ->withCustomers($customers)
+         //   ->withRooms($rooms);
     }
 
     /**
